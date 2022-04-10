@@ -77,6 +77,11 @@
         }
 }
 @media (max-width: 860px) {
+    .contanier {
+        
+        height: 760px;
+    }
+
     .cards {
         width: 700px;
         margin-left:170px;
@@ -84,8 +89,15 @@
 
     }
     .agents {
-
-        left:20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        
+        transform: none;
+        width: max-content;
+        margin: 0 auto;
+        margin-top: 15px;
+        display: block;
 
         
         }
@@ -109,4 +121,133 @@
     
             
             }
+            .slide-button {
+ 
+                margin-left: 0;
+        
+            }
+}
+@media (max-width: 800px) {
+    .card {
+
+        
+        width: 250px;
+        height: 350px;
+
+    }
+
+
+    .cards {
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+ align-items:center;
+        
+        
+    
+    }
+    .card {
+    margin: 0 auto;
+    }
+    .cards-slides-next,.cards-slides-prev {
+       
+        display: flex;
+    
+    }
+
+}
+@media (max-width: 600px) {
+    .main_slider_wrap {
+        align-items:center
+    }
+    .contanier {
+        
+        height: 860px;
+    }
+    .slide_skills {
+        width: 250px;
+        height: 200px;
+        flex-direction: column;
+        
+        
+        }
+        .slide_skills-text {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        
+        }
+        .slide_slills-wrap_logo  {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .slide_slills-logo {
+            position: relative;
+            top:15px;
+            left: 15px;
+        }
+        .card {
+
+        
+            width: 200px;
+            height: 350px;
+    
+        }
+        .card__skills {
+
+            position: absolute;
+            bottom:-20px;
+            left: -10px;
+            width: 220px;
+            height: 50px;
+
+        }
+}
+@media (max-width: 500px) {
+
+    .card {
+
+        
+        width: 280px;
+        height: 350px;
+
+    }
+    .card__skills {
+
+
+        width: 300px;
+   
+
+    }
+    .slide_skills {
+        width: 200px;
+        height: 200px;
+        flex-direction: column;
+        
+        
+        }
+        .cards-slides-next,.cards-slides-prev {
+       
+           display: none;
+        
+        }
+        .swipe-text {
+            display: block;
+        }
+        .contanier {
+        
+            height: 900px;
+        }
+
+}
+@media (max-width: 400px) {
+    .agents {
+
+        
+        font-size: 30px;
+        
+
+        
+        }
 }

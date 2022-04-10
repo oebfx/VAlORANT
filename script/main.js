@@ -98,9 +98,20 @@ const swiper1 = new Swiper('.swiper1', {
     breakpoints: {
         700: {
             allowTouchMove: true,
+            slidesPerView: 1,
+            coverflowEffect: {
+                rotate: -40,
+                stretch: 0,
+                depth: 0,
+                modifier: 1,
+                slideShadows: false,
+            },
+        },
+        800: {
+            allowTouchMove: true,
             slidesPerView: 3,
             coverflowEffect: {
-                rotate: -20,
+                rotate: -40,
                 stretch: 0,
                 depth: 0,
                 modifier: 1,
@@ -151,12 +162,12 @@ const swiper1 = new Swiper('.swiper1', {
 
 
     // стрелки навигации
-    // navigation: {
+    navigation: {
 
-    //     // prevEl: '.main_slider_arrow-prev',
-    //     nextEl: '.main_slider_arrow-next',
+        prevEl: '.cards-slides-prev',
+        nextEl: '.cards-slides-next',
 
-    // },
+    },
 
 });
 
