@@ -170,7 +170,7 @@
         flex-direction: column;
         
         
-        }
+    }
         .slide_skills-text {
             width: 200px;
             margin: 0 auto;
@@ -183,10 +183,21 @@
         }
 
         .slide_slills-logo {
-            position: relative;
-            top:15px;
-            left: 15px;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            
+
         }
+        .slide_slills-logo-img {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+
         .card {
 
         
@@ -239,9 +250,15 @@
         
             height: 900px;
         }
+        .swiper-wrapper1{
+            padding: 20px 0 0 10px ;
+        }
 
 }
 @media (max-width: 400px) {
+    .swiper-wrapper1{
+        padding: 20px 0 0 0px ;
+    }
     .agents {
 
         
@@ -249,5 +266,40 @@
         
 
         
+        } 
+
+
+        .card {
+
+        
+            width: 200px;
+            height: 350px;
+    
+        }
+        .card__skills {
+
+            position: absolute;
+            bottom:-20px;
+            left: -10px;
+            width: 220px;
+            height: 50px;
+
+        }
+        .slide_skills {
+            width: 300px;
+            height: 250px;
+            flex-direction: column;
+            
+            
+        }
+        .slide_slills-discription {
+
+        font-size: 16px;
+        
+        
+       
+        }
+        .main_slider_arrow-prev, .main_slider_arrow-next {
+            display: none;
         }
 }
