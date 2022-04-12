@@ -1,29 +1,29 @@
-// //меню 
-// const mobile_menu = document.querySelector('.mobile-menu');
-// const menu = document.querySelector('.nav-items');
-// const toggleMenu = function () {
-//     menu.classList.toggle('active');
-// }
+//меню 
+const mobile_menu = document.querySelector('.mobile-menu');
+const menu = document.querySelector('.nav-items');
+const toggleMenu = function () {
+    menu.classList.toggle('active-menu');
+}
 
 
-// mobile_menu.addEventListener('click', function (e) {
-//     e.stopPropagation();
-//     toggleMenu();
-// });
+mobile_menu.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+});
 
 
-// document.addEventListener('click', function (e) {
-//     const target = e.target;
-//     const its_menu = target == menu || menu.contains(target);
-//     const its_btnMenu = target == mobile_menu;
-//     const menu_is_active = menu.classList.contains('active');
+document.addEventListener('click', function (e) {
+    const target = e.target;
+    const its_menu = target == menu || menu.contains(target);
+    const its_btnMenu = target == mobile_menu;
+    const menu_is_active = menu.classList.contains('active-menu');
 
-//     if (!its_menu && !its_btnMenu && menu_is_active) {
-//         toggleMenu();
-//     }
+    if (!its_menu && !its_btnMenu && menu_is_active) {
+        toggleMenu();
+    }
 
 
-// });
+});
 
 
 // //соцсети

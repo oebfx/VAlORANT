@@ -48,8 +48,24 @@
 
 @media (max-width: 1150px) {
     .nav-items {
-        display: none;
+        display:none;
+
+
     }
+    .nav-items.active-menu {
+        display:flex;
+        position:absolute;
+        top: 59px;
+        padding: 15px 30px;
+        background-color:rgba(31, 35, 38, 0.9);
+        right: 50%;
+
+        transform: translate(50%);
+        z-index: 5;
+    
+    }
+
+
     .mobile-menu {
         display: flex;
     }
@@ -77,6 +93,13 @@
         }
 }
 @media (max-width: 860px) {
+    .nav-items.active-menu {
+        width: 400px;
+    }
+    .nav-item{
+        padding: 10px;
+        
+    }
     .contanier {
         
         height: 760px;
@@ -186,9 +209,8 @@
             position: absolute;
             top:0px;
             left: 0px;
-            display: flex;
-            justify-content: center;
-            align-items:center;
+            
+            
             
 
         }
@@ -196,6 +218,8 @@
             display: flex;
             justify-content: center;
             align-items:center;
+            
+            
         }
 
         .card {
@@ -216,7 +240,18 @@
         }
 }
 @media (max-width: 500px) {
+    .nav-items.active-menu {
+        width: 400px;
+        /* left: 57%; */
+        right: -1px;
+        width: 250px;
+        transform: none;
 
+       
+    }
+    .account {
+        display: none;
+    }
     .card {
 
         
@@ -300,6 +335,17 @@
        
         }
         .main_slider_arrow-prev, .main_slider_arrow-next {
-            display: none;
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            z-index: 5;
+            height: 80px;
+            /* display: none; */
+        }
+        .main_slider_arrow-prev {
+            left: 2.5%;
+        }
+        .main_slider_arrow-next{
+           left: 82%;
         }
 }
