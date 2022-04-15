@@ -299,6 +299,7 @@ transition: all 0.3s ease;
  .mobile-menu:active{
     transform: scale(1);
     background-color:#e8414f;
+
 }
 .account {
     display: flex;
@@ -390,6 +391,55 @@ transform: rotate(90deg);
     border-radius:5px;
     position: relative;
 }
+
+.swiper-slide-active .mb{
+    transform: scale(1.1);
+    background: #F8F8F8;
+    border: 1px solid #000000;
+}
+.swiper-slide-active  .mb .card__name-nikname {
+    font-family: "Druk Wide Bold";
+   font-size: 32px;
+   letter-spacing: 0.1em;
+   -webkit-text-stroke: 1px #000000;
+   -webkit-text-fill-color: transparent;
+}
+.swiper-slide-active .mb .card__skills-img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.swiper-slide-active .mb .card__skills {
+    border: 1px solid #000000;
+    background: #F8F8F8;
+}
+
+
+
+
+.swiper-slide-next .tb{
+    transform: scale(1.1);
+    background: #F8F8F8;
+    border: 1px solid #000000;
+}
+.swiper-slide-next  .tb .card__name-nikname {
+    font-family: "Druk Wide Bold";
+   font-size: 32px;
+   letter-spacing: 0.1em;
+   -webkit-text-stroke: 1px #000000;
+   -webkit-text-fill-color: transparent;
+}
+.swiper-slide-next .tb .card__skills-img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.swiper-slide-next .tb .card__skills {
+    border: 1px solid #000000;
+    background: #F8F8F8;
+}
+
+
+
+
 .active {
 
     transform: scale(1.1);

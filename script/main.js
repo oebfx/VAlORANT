@@ -171,14 +171,6 @@ const swiper1 = new Swiper('.swiper1', {
 
 });
 
-
-
-
-
-
-
-
-
 const card = document.querySelectorAll('.card');
 const skillcard = document.querySelectorAll('.slide_skills');
 const skill_1 = document.querySelectorAll('.skill_1');
@@ -186,43 +178,125 @@ const skill_2 = document.querySelectorAll('.skill_2');
 const skill_3 = document.querySelectorAll('.skill_3');
 const skill_4 = document.querySelectorAll('.skill_4');
 
-card.forEach(card => {
-    card.addEventListener('click', (event) => {
-        idskill = event.currentTarget.id;
-        console.log(idskill);
+
+// window.addEventListener('resize', function (e) {
+// });
+
+const windowInnerWidth = document.documentElement.clientWidth;
+
+
+if (windowInnerWidth > 1350) {
+    card.forEach(element => {
+        element.classList.remove("mb");
+
+    })
+
+    card.forEach(element => {
+        element.classList.remove("tb");
+
+    })
+
+    slidePc();
+}
+if (windowInnerWidth > 800 && windowInnerWidth < 1350) {
+    card.forEach(element => {
+        element.classList.remove("mb");
+        element.classList.add("tb");
+    })
+    slideTable();
+}
+if (windowInnerWidth < 800) {
+    card.forEach(element => {
+        element.classList.remove("tb");
+        element.classList.add("mb");
+    })
+    slideMobile();
+};
+
+
+
+
+// const card1 = document.querySelectorAll('.card1');
+// const card2 = document.querySelectorAll('.card2');
+// const card3 = document.querySelectorAll('.card3');
+// const card4 = document.querySelectorAll('.card4');
+
+
+
+//slideTable();
+
+function slideTable() {
+    toggskillTable()
+    swiper1.on('slideChange', function () {
         remcards();
-        card.classList.add("active");
+        indslide = swiper1.realIndex;
+        remskill();
+        toggskillTable()
+    })
 
-        if (idskill == "card1") {
-            remskill();
-            skill_1.forEach(element => {
-                element.style.display = "flex";
-            })
 
-        };
-        if (idskill == "card2") {
-            remskill();
-            skill_2.forEach(element => {
-                element.style.display = "flex";
-            })
+};
 
-        };
-        if (idskill == "card3") {
-            remskill();
-            skill_3.forEach(element => {
-                element.style.display = "flex";
-            })
+// slideMobile()
 
-        };
-        if (idskill == "card4") {
-            remskill();
-            skill_4.forEach(element => {
-                element.style.display = "flex";
-            })
+function slideMobile() {
+    toggskillMobile()
 
-        }
+    swiper1.on('slideChange', function () {
+        remcards();
+        indslide = swiper1.realIndex;
+        remskill();
+        toggskillMobile()
+
+    })
+
+
+};
+
+
+//slidePc()
+
+function slidePc() {
+
+
+    card.forEach(card => {
+        card.addEventListener('click', (event) => {
+            idskill = event.currentTarget.id;
+
+            remcards();
+            card.classList.add("active");
+
+            if (idskill == "card1") {
+                remskill();
+                skill_1.forEach(element => {
+                    element.style.display = "flex";
+                })
+
+            };
+            if (idskill == "card2") {
+                remskill();
+                skill_2.forEach(element => {
+                    element.style.display = "flex";
+                })
+
+            };
+            if (idskill == "card3") {
+                remskill();
+                skill_3.forEach(element => {
+                    element.style.display = "flex";
+                })
+
+            };
+            if (idskill == "card4") {
+                remskill();
+                skill_4.forEach(element => {
+                    element.style.display = "flex";
+                })
+
+            }
+        });
     });
-});
+}
 
 function remcards() {
     card.forEach(element => {
@@ -232,11 +306,108 @@ function remcards() {
 }
 
 
-
-
 function remskill() {
     skillcard.forEach(element => {
         element.style.display = "none";
 
     })
+}
+
+
+function toggskillMobile() {
+    indslide = swiper1.realIndex;
+    remskill();
+    if (indslide == "0") {
+        // card1.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_1.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    };
+    if (indslide == "1") {
+
+        // card2.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_2.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    };
+    if (indslide == "2") {
+
+        // card3.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_3.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    };
+    if (indslide == "3") {
+
+        // card4.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_4.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    }
+
+}
+
+
+function toggskillTable() {
+    indslide = swiper1.realIndex;
+    remskill();
+    if (indslide == "3") {
+        // card1.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_1.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    };
+    if (indslide == "0") {
+
+        // card2.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_2.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    };
+    if (indslide == "1") {
+
+        // card3.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_3.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    };
+    if (indslide == "2") {
+
+        // card4.forEach(element => {
+        //     element.classList.add("active")
+        // })
+
+        skill_4.forEach(element => {
+            element.style.display = "flex";
+        })
+
+    }
 }
