@@ -272,9 +272,7 @@ flex-wrap: wrap;
 
 }
 
-.nav-item {
 
-}
 .nav-item a {
     color: #FFFFFF;
  }
@@ -537,7 +535,7 @@ max-width: 1200px;
 width: 100%;
 overflow: hidden;
 padding: 0 15px;
-/* position: relative; */
+position: relative;
 
 }
 .swipe-text {
@@ -557,17 +555,11 @@ letter-spacing: 0.1em;
 .main_slider_arrow-prev {
     display: none;
 }
-.main_slider {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
+
 .main_slider_slide {
     display: flex;
 }
-.swiper-slide {
-}
+
 .slide_skills {
 width: 350px;
 height: 120px;

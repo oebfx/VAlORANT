@@ -30,7 +30,7 @@
 
         
         }
-        .cards {
+ 
 
          
 
@@ -342,10 +342,9 @@
             height: 80px;
             /* display: none; */
         }
-        .main_slider_arrow-prev {
-            left: 2.5%;
-        }
+
         .main_slider_arrow-next{
-           left: 82%;
+           
+           right: 15px;
         }
 }
